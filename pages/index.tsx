@@ -1,15 +1,19 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import styled from '@emotion/styled'
+import LeftMenu from "../components/LeftMenu";
+import Learners from "../components/PagesContent/Learners"
+import BasicCSS from "../components/BasicCSS";
+
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
+  <Page>
+    <BasicCSS/>
+    <LeftMenu/>
+    <Learners/>
+  </Page>
 )
 
+const Page = styled.div`
+  display: flex;
+  align-items: center;
+`
 export default IndexPage
